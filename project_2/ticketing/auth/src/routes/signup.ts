@@ -16,7 +16,7 @@ router.post(
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-      return res.status(400).send(errors.array());
+      return new Error('Invalid email ')
     }
     const { email, password } = req.body;
 
